@@ -1,0 +1,474 @@
+html, body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.sticky-about-modified {
+  margin-top: 70px;
+}
+
+.subtle-text {
+  color: rgba(169, 153, 153, 0.8);
+}
+
+.wrapper-bg-grey {
+  background: #F2F2F2;
+}
+
+.section-header {
+  margin-bottom: 20px;
+  color: #232F31;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#navigate-portfolio {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+#banner {
+  background: black;
+  /*background: #232F31;*/
+  height: calc(100vh - 70px);
+  position: relative;
+}
+
+#banner h2 {
+  margin-top: 10px;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+}
+
+#banner p {
+  text-align: center;
+  color: #A37373;
+  font-size: 24px;
+}
+
+#banner a {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+#banner a:hover {
+  color: white;
+}
+
+#about {
+  padding-top: 100px;
+  position: relative;
+}
+
+#about p {
+  margin: 30px;
+}
+
+#about .container-about-details {
+  padding: 30px 0;
+}
+
+#about .about-title {
+  margin-bottom: 10px;
+}
+
+#about .about-title i {
+  font-size: 18px;
+}
+
+#about .about-title span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#about .subtle-text {
+  margin: 15px 0;
+}
+
+#about a {
+  text-decoration: none;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#about a:hover {
+  color: black;
+}
+
+#portfolio {
+  margin-top: 50px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.subtitle
+{
+  color: #A37373
+}
+.card {
+  float: left;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+  overflow: hidden;
+  margin: 80px 30px 20px 30px;
+  transition: 0.5s;
+  width: 25%;
+  
+}
+
+
+
+.about-title{
+  margin: 10px 10px 10px 10px;
+}
+
+.card .title {
+  padding: 2px 15px 5px 15px;
+  background: #232F31;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.detail {
+  position: relative;
+  border-bottom: 3px solid #232F31;
+}
+
+.detail .text {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  bottom: 0;
+  right: 15px;
+  color: white;
+  z-index: -1;
+}
+
+.detail .img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
+  position: relative;
+  /* If you want text inside of it */
+}
+
+.detail img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.detail:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #A37373;
+}
+
+.detail:hover img {
+  -webkit-filter: brightness(25%);
+          filter: brightness(25%);
+}
+
+.detail:hover .text {
+  z-index: 1;
+}
+
+.more-wrapper {
+  background: #F2F2F2;
+}
+
+.more-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.more-container .social {
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.more-container .social-item {
+  margin: 5px;
+  color: #232F31;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.more-container .social-item:hover {
+  opacity: 1;
+}
+
+#contact {
+  background: #A37373;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#contact .container {
+  display: flex;
+}
+
+#contact .block {
+  flex: 1;
+  margin: 50px 25px;
+}
+
+#contact .block.info {
+  color: white;
+}
+
+#contact .block.info h2 {
+  margin: 0 0 10px 0;
+}
+
+#contact .block.info p {
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+#contact .social a {
+  color: #232F31;
+  font-size: 36px;
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
+#contact .social a:hover {
+  opacity: 1;
+  color: #232F31;
+}
+
+#contact .block.form {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#contact .block.form .label {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#contact .block.form input[type=text], #contact .block.form textarea {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  background: #495558;
+  border: none;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  text-indent: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+#contact .block.form input[type=text]:focus, #contact .block.form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+
+#contact .block.form textarea {
+  padding-top: 5px;
+  height: 120px;
+}
+
+#contact .block.form input[type=submit] {
+  font-size: 16px;
+  margin-top: 10px;
+  background: #232F31;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.9;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#contact .block.form input[type=submit]:focus {
+  outline: none;
+  opacity: 1;
+}
+
+#contact .block.form input[type=submit]:hover {
+  opacity: 1;
+}
+
+@media (max-width: 920px) {
+  #contact .container {
+    flex-direction: column;
+  }
+  #contact .block:nth-child(1) {
+    margin-bottom: 0;
+  }
+}
+
+#footer {
+  color: rgba(255, 255, 255, 0);
+  background: #232F31;
+  font-size: 14px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+#footer.show {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar {
+  height: 70px;
+  background-color: #A37373;
+  color: white;
+  margin: 0;
+  z-index: 1;
+}
+
+.navbar .logo {
+  display: inline-block;
+  line-height: 70px;
+  padding: 0 50px;
+  font-size: 24px;
+  color: #232F31;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .list {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  margin-right: 50px;
+}
+
+.navbar .list .list-item {
+  text-decoration: none;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .list .list-item:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid white;
+}
+
+#avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+@media (max-width: 580px) {
+  .navbar {
+    padding: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+  }
+  .logo {
+    height: 50% !important;
+    line-height: 24px !important;
+  }
+  .list {
+    position: relative !important;
+    height: 50% !important;
+    margin-right: 0 !important;
+  }
+  .list .list-item:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-bottom: none !important;
+  }
+  .sticky-about-modified {
+    margin-top: 100px;
+  }
+  .about-body {
+    padding: 0 30px;
+  }
+}
+
+/*perrito chidori*/
+
+
+body:after {
+  z-index: 3;
+  content: "Hover on the transforming light!";
+  position: relative;
+  display: block;
+  margin: 10vh auto 0;
+  text-align: center;
+  color: #fff;
+  font: 700 24px/1em Arial, Sans-serif;
+}
+
+body video {
+  z-index: 2;
+  position: relative;
+  display: block;
+  margin: 0 auto 0;
+  height: 60vh;
+  width: auto;
+  -webkit-filter: blur(50px) contrast(120%);
+  filter: blur(50px) contrast(120%);
+  cursor: grab;
+  transition: filter 2s ease-in-out 0s;
+}
+
+body:hover:after {
+  content: "[A] Dog GIF by Perfectloops on gfycat.com"
+}
+
+body video:hover {
+  -webkit-filter: blur(0px) contrast(120%);
+  filter: blur(0px) contrast(120%);
+}

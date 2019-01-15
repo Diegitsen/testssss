@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio page</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="app">
+  <div id="banner">
+
+    <div>
+            <video id="planet" onloadeddata="this.play();" poster="poster.png" playsinline loop muted>
+                    <source src="img/video.mp4" type="video/webm" />
+                    Your browser does not support the video tag or the file format of this video.
+            </video>
+    </div>
+
+    <div>
+            <div class="container">
+                    <h2>Hola, HackSpace</h2><br>
+                      <p><span id="banner-typed-text"></span></p>
+                      <a class="nav-portfolio" v-on:click="goPortfolio"><i class="fas fa-chevron-circle-down"></i></a>
+            </div>
+              
+    </div>
+
+        
+
+
+      
+   
+  </div>
+  <div class="navbar" id="navbar">
+      <div id="logo" class="logo d-none" v-on:click="goHome">Diego Salcedo</div>
+      <div class="list">
+          <a id="nav-about" class="list-item" v-on:click="goAbout">Acerca</a>
+          <a id="nav-portfolio" class="list-item nav-portfolio" v-on:click="goPortfolio">Portafolio</a>
+          <a id="nav-contact" class="list-item" v-on:click="goContact">Contacto</a>
+      </div>
+  </div>
+
+  <div id="about">
+    <div class="container" >
+        <h2 class="text-center section-header">Acerca de mi</h2>
+        <img src="img/profile.jpg" alt="" id="avatar" > <br><br>
+        <p >Soy estudiante de la carrera de Ingeniería de Software en la UPC, con experiencia en el desarrollo de apps
+             en Android, frontend en páginas web, base de datos, algoritmos y creación de videojuegos. 
+             Me he especializado en el desarrollo de apps en Android, cuento con diversos proyectos, amo desarrollar apps.
+            </p> <br>
+    </div>
+    <div class="wrapper wrapper-bg-grey">
+      <div class="container container-about-details">
+        <div class="row">
+            <div v-for="aboutItem in aboutItems" class="col-dm-12 col-md-4">
+                <div class="about-title">
+                    <i class="fas fa-pen-fancy"></i>
+                    <span>Diseño</span><hr>
+                </div>
+                <div class="about-body">
+                    Valoro la estructura de contenido simple, los patrones de diseño limpio y las interacciones bien pensadas.
+                </div> <hr>
+
+                <div class="subtitle">
+                    Cosas que disfruto diseñando:
+                </div> <br>
+
+                <div class="about-body">
+                    UX, UI, Web, Mobile, Apps
+                </div> <hr>
+
+                <div class="subtitle">
+                    Herramientas de diseño:
+                </div>
+
+                <br> <div class="about-body">    Balsamiq MockUps </div>
+                <br> <div class="about-body">    Marvel Apps</div>
+
+
+            </div>   
+            
+            <div v-for="aboutItem in aboutItems" class="col-dm-12 col-md-4">
+                <div class="about-title">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Android Developer</span><hr>
+                </div>
+                <div class="about-body">
+                    Disfruto darle vida a las ideas en una app. <br> <br> <br>
+                </div> <hr>
+
+                <div class="subtitle">
+                    Lenguajes que domino:
+                </div> <br>
+
+                <div class="about-body">
+                    Java, Kotlin, C++, C#, HTML, CSS
+                </div> <hr>
+
+                <div class="subtitle">
+                    Herramientas de desarrollo:
+                </div>
+
+                <br> <div class="about-body"> Visual Studio </div>
+                <br> <div class="about-body"> Android Studio </div>
+                <br> <div class="about-body"> Github </div>
+
+            </div>   
+
+            <div v-for="aboutItem in aboutItems" class="col-dm-12 col-md-4">
+                <div class="about-title">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Mentor</span> <hr>
+                </div>
+                <div class="about-body">
+                    Me gusta ayudar a las demás personas en su viaje al fantastico mundo de la programación de apps.
+                </div> <hr>
+
+                <div class="subtitle">
+                    Donde enseño:
+                </div> <br>
+
+                <div class="about-body">
+                    HackSpace Perú
+                </div> <hr>
+
+                <div class="subtitle">
+                    Estadísticas del mentor:
+                </div> 
+
+                <br> <div class="about-body"> 1 año de experiencia </div>
+                <br> <div class="about-body"> Co-organizador del evento CoreUpgrade 2018 </div>
+
+            </div>   
+        </div><br><br>
+        <div class="container">
+            <a class="nav-portfolio"><i class="fas fa-chevron-circle-down"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio">
+      <div id="navigate-portfolio"></div>
+      <div class="container">
+          <h2 class="text-center section-header">Portafolio</h2>
+          
+          <div >
+              <div v-for="project in projects">
+                <a href="https://github.com/Diegitsen/Gliixx" >
+                  <div class="card" class ="column">
+                      <div class="detail">
+                          <p class="text">
+                            Un reproductor de música con estilo aesthetic</p>
+                          <div class="img-container">
+                              
+                                    <img src="img/glixlogo.png"alt="">
+                             
+                              
+                          </div>
+                      </div>
+                      <div class="title">Glix</div>
+                </div>
+
+            </a>
+
+                
+              </div>
+          </div>
+
+          <div >
+            <div v-for="project in projects">
+                <a href="https://github.com/Diegitsen/Objective">
+                <div class="card" class ="column">
+                    <div class="detail">
+                        <p class="text">
+                          
+                            Alarma que te ayuda a cumplir tus metas</p>
+                        <div class="img-container">
+                            <img src="img/objectivelogo.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="title">Objective</div>
+                </div>
+            </a>
+
+              
+            </div>
+        </div>
+
+          <div >
+            <div v-for="project in projects">
+                <a href="https://github.com/Diegitsen/DespertavozApp">
+                <div class="card" class ="column">
+                    <div class="detail">
+                        <p class="text">
+                          
+                            Una alarma que te depierta con tu propia voz!</p>
+                        <div class="img-container">
+                            <img src="img/despertavozlogo.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="title">Despertavoz</div>
+                </div>
+
+            </a>
+            </div>
+        </div>
+
+
+          
+
+          <div >
+            <div v-for="project in projects" >
+                <a  href="https://github.com/Diegitsen/Clerk">
+                <div class="card">
+                    <div class="detail">
+                        <p class="text">
+                            Un bot con un único objetivo...ayudarte a caminar seguro por las calles de Lima</p>
+                        <div class="img-container">
+                            <img src="img/clerklogo.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="title">Clerk</div>
+                </div>
+
+            </a>
+            </div>
+          </div>
+
+          <div >
+            <div v-for="project in projects" >
+                <a  href="https://github.com/Diegitsen/Tripper">
+                <div class="card">
+                    <div class="detail">
+                        <p class="text">
+                            Una red social solo para viajeros</p>
+                        <div class="img-container">
+                            <img src="img/tripperlogo.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="title">Tripper</div>
+                </div>
+                </a>
+            </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div class="wrapper more-wrapper">
+      <div class="container more-container">
+          <p class="text-center">               </p>
+          <div class="social">
+              <a href="https://medium.com/@diegitsen" class="social-item">
+                  <i class="fab fa-medium"></i>
+              </a>
+              <a href="https://github.com/Diegitsen" class="social-item">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://instagram.com/Diegitsen" class="social-item">
+                  <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="https://facebook.com/Diegitsen" class="social-item">
+                <i class="fab fa-facebook"></i>
+            </a>
+          </div>
+      </div>
+  </div>
+
+  <div id="contact" class="wrapper">
+    <div class="container">
+      <div class="block info">
+        <h2 class="title">Contacto</h2>
+        <p class="body">
+            997570199 <br/>
+            diegitsen@gmail.com
+        </p>
+      </div>
+      <form class="block form" name="contact" method="POST" data-netlify="true">
+          <div class="form-group">
+              <label class="label">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Su nombre..." />
+          </div>
+          <div class="form-group">
+              <label class="label">Email</label>
+              <input type="text" id="email" name="email" placeholder="Su email..." />
+          </div>
+          <div class="form-group">
+              <label class="label">Mensaje</label>
+              <textarea name="message" id="message" placeholder="Su mensaje..."></textarea>
+          </div>
+          <div class="form-group">
+              <input type="submit">
+          </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer">
+      <p>© 2019 Diego Salcedo Vaccaro. All Rights Reserved</p>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
